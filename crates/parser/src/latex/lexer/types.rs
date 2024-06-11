@@ -114,6 +114,7 @@ pub enum CommandName {
     SvgInclude,
     InkscapeInclude,
     VerbatimInclude,
+    ExternalInclude,
     Import,
     LabelDefinition,
     LabelReference,

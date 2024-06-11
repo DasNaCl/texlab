@@ -40,6 +40,7 @@ pub fn complete_includes<'a>(
         latex::SVG_INCLUDE => (true, &["svg"]),
         latex::INKSCAPE_INCLUDE => (true, &["pdf", "eps", "ps", "png"]),
         latex::VERBATIM_INCLUDE => (true, &[]),
+        latex::EXTERNAL_INCLUDE => (false, &["tex", "aux"]),
         _ => return None,
     };
 

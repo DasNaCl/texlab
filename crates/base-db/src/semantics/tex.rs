@@ -91,6 +91,7 @@ impl Semantics {
                 latex::LATEX_INCLUDE => LinkKind::Tex,
                 latex::BIBLATEX_INCLUDE => LinkKind::Bib,
                 latex::BIBTEX_INCLUDE => LinkKind::Bib,
+                latex::EXTERNAL_INCLUDE => LinkKind::Tex,
                 _ => continue,
             };
 

@@ -26,6 +26,7 @@ pub fn classify(name: &str, config: &SyntaxConfig) -> CommandName {
         "includesvg" => CommandName::SvgInclude,
         "includeinkscape" => CommandName::InkscapeInclude,
         "verbatiminput" | "VerbatimInput" => CommandName::VerbatimInclude,
+        "externaldocument" => CommandName::ExternalInclude,
         "import" | "subimport" | "inputfrom" | "subinputfrom" | "subincludefrom" => {
             CommandName::Import
         }

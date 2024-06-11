@@ -134,6 +134,7 @@ impl<'a> Parser<'a> {
                 CommandName::SvgInclude => self.svg_include(),
                 CommandName::InkscapeInclude => self.inkscape_include(),
                 CommandName::VerbatimInclude => self.verbatim_include(),
+                CommandName::ExternalInclude => self.external_include(),
                 CommandName::Import => self.import(),
                 CommandName::LabelDefinition => self.label_definition(),
                 CommandName::LabelReference => self.label_reference(),
@@ -836,6 +837,10 @@ impl<'a> Parser<'a> {
 
     fn verbatim_include(&mut self) {
         self.generic_include(VERBATIM_INCLUDE, false);
+    }
+
+    fn external_include(&mut self) {
+        self.generic_include(EXTERNAL_INCLUDE, false);
     }
 
     fn import(&mut self) {
